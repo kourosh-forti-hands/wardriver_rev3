@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wardriver Rev3 OTA Updates</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        h1 { color: #333; }
+        .info { background: #f0f0f0; padding: 15px; border-radius: 5px; margin: 20px 0; }
+        code { background: #e8e8e8; padding: 2px 6px; border-radius: 3px; }
+        a { color: #0366d6; }
+    </style>
+</head>
+<body>
+    <h1>Wardriver Rev3 - OTA Update Server</h1>
+    <div class="info">
+        <p><strong>Current Version:</strong> 1.3.0b1</p>
+        <p><strong>Release Type:</strong> Stable Release (SR)</p>
+        <p><strong>Last Updated:</strong> 2025-11-22</p>
+    </div>
+
+    <h2>Downloads</h2>
+    <ul>
+        <li><a href="https://github.com/kourosh-forti-hands/wardriver_rev3/releases/download/v1.3.0b1/A.bin">Module A Firmware</a> (1.1M)</li>
+        <li><a href="https://github.com/kourosh-forti-hands/wardriver_rev3/releases/download/v1.3.0b1/B.bin">Module B Firmware</a> (1.5M)</li>
+        <li><a href="https://github.com/kourosh-forti-hands/wardriver_rev3/releases/download/v1.3.0b1/CHECKSUMS.txt">SHA256 Checksums</a></li>
+        <li><a href="https://github.com/kourosh-forti-hands/wardriver_rev3/releases/download/v1.3.0b1/RELEASE_NOTES.md">Release Notes</a></li>
+    </ul>
+
+    <h2>OTA Manifest</h2>
+    <p>Wardrivers automatically check: <code>https://kourosh-forti-hands.github.io/wardriver_rev3/latest.txt</code></p>
+    <pre><code>SR>1.3.0b1>>>a9521ed4b1713781dff613fee98e99187a600a8076fb7c93e373aa89ce7a3a0d>https://github.com/kourosh-forti-hands/wardriver_rev3/releases/download/v1.3.0b1/A.bin>https://github.com/kourosh-forti-hands/wardriver_rev3/releases/download/v1.3.0b1/B.bin</code></pre>
+
+    <h2>Checksums</h2>
+    <pre><code>Module A: f301e672017f84993536874c936ebe8b00b4a82fc75fc96a4d453aa835b0b6cf
+Module B: a9521ed4b1713781dff613fee98e99187a600a8076fb7c93e373aa89ce7a3a0d</code></pre>
+
+    <h2>Installation</h2>
+    <p>Wardrivers will automatically detect and download this update when connected to WiFi.</p>
+    <p>Manual installation: <code>pio run -e esp32_moduleA -t upload</code></p>
+
+    <h2>Documentation</h2>
+    <ul>
+        <li><a href="https://github.com/kourosh-forti-hands/wardriver_rev3">GitHub Repository</a></li>
+        <li><a href="https://github.com/kourosh-forti-hands/wardriver_rev3/releases/tag/v1.3.0b1">Release v1.3.0b1</a></li>
+    </ul>
+
+    <h2>Flock Detection Features</h2>
+    <ul>
+        <li>✅ Flock Safety camera detection (19 MAC prefixes, Threat: 95)</li>
+        <li>✅ Raven gunshot detector fingerprinting (8 BLE UUIDs, Threat: 100)</li>
+        <li>✅ Penguin surveillance device detection (19 MAC prefixes, Threat: 90)</li>
+        <li>✅ GPS location binding (MANDATORY for all detections)</li>
+        <li>✅ JSON logger with threat scoring</li>
+        <li>✅ 42 comprehensive unit tests</li>
+    </ul>
+</body>
+</html>
